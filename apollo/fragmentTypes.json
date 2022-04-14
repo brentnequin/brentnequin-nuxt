@@ -1,0 +1,22 @@
+{
+  "possibleTypes": {
+    "AboutBodyDynamicZone": [
+      "ComponentArticleImage",
+      "ComponentArticleParagraph",
+      "Error"
+    ],
+    "GenericMorph": [
+      "About",
+      "ComponentArticleImage",
+      "ComponentArticleParagraph",
+      "ComponentEducationItem",
+      "ComponentEducationList",
+      "Home",
+      "I18NLocale",
+      "UploadFile",
+      "UsersPermissionsPermission",
+      "UsersPermissionsRole",
+      "UsersPermissionsUser"
+    ]
+  }
+}

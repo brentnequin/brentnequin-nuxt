@@ -1,0 +1,29 @@
+query About {
+  about {
+    data {
+      attributes {
+        title
+        body {
+            ...on ComponentArticleParagraph {
+                text
+            }
+            ...on ComponentArticleImage {
+                image {
+                    data {
+                        attributes {
+                            url
+                        }
+                    }
+                }
+            }
+        }
+        education_list {
+          degree
+          field
+          year
+          university
+        }
+      }
+    }
+  }
+}
