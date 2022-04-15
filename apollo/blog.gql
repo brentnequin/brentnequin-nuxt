@@ -1,0 +1,15 @@
+query Blog {
+    posts {
+        data {
+            attributes {
+                title
+              	date_created
+              	slug
+              	categories {
+                  name
+                }
+              	excerpt
+            }
+        }
+    }
+}

@@ -1,3 +1,5 @@
+import { maybeDeepFreeze } from "@apollo/client/utilities";
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -16,15 +18,22 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: "stylesheet", type: "text/css", href: "https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css"},
+      { rel: "stylesheet", type: "text/css", href: "https://cdn.jsdelivr.net/github-markdown-css/2.2.1/github-markdown.css"},
+      { rel: "stylesheet", type: "text/css", href: "https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css"},
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '@/assets/css/main.css',
-    // '@/assets/scss/main.scss',
+    // '~/node_modules/highlight.js/scss/default.scss'
   ],
+
+  env: {
+    graphql_url: "https://brentnequin-strapi.herokuapp.com/graphql"
+  },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -41,7 +50,7 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     ['nuxt-buefy', { css: false }],
-    '@nuxt/content',
+    // '@nuxt/content',
     'nuxt-breakpoints',
     '@nuxtjs/apollo',
     '@nuxtjs/markdownit'
@@ -75,7 +84,12 @@ export default {
     preset: 'default',
     linkify: true,
     breaks: true,
-    injected: true
+    injected: true,
+    use: [
+      'markdown-it-katex',
+      'markdown-it-highlightjs',
+      'markdown-it-anchor'
+    ],
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
