@@ -31,6 +31,10 @@ p {
     line-height: 1.5;
 }
 
+strong {
+    font-weight: 700;
+}
+
 small {
     font-size: 11px;
     color: grey;
@@ -47,4 +51,18 @@ a:hover {
 
 section {
     margin: 2rem 0;
+}
+
+figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 0.3em;
+    box-shadow:rgba(0, 0, 0, 0.15) 0 1px 4px;
+    box-sizing: border-box;
+    border: #fff 0.3em solid;
 }

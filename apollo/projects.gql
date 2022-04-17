@@ -1,0 +1,33 @@
+query Projects {
+    project {
+        data {
+            attributes {
+                title
+                description
+                projects {
+                    title
+                    description
+                    link
+                    languages {
+                        name
+                        fa_icon
+                    }
+                    project_category {
+                        data {
+                            attributes {
+                                name
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    projectCategories {
+        data {
+            attributes {
+                name
+            }
+        }
+    }
+}

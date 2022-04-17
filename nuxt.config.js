@@ -88,7 +88,8 @@ export default {
     use: [
       'markdown-it-katex',
       'markdown-it-highlightjs',
-      'markdown-it-anchor'
+      'markdown-it-anchor',
+      'markdown-it-image-figures'
     ],
   },
 

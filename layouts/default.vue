@@ -14,5 +14,6 @@ header {
 
 footer {
     border-top: 1px solid #e8e8e8;
+    margin-bottom: 3rem;
 }
 </style>

@@ -946,6 +946,14 @@
     "@babel/helper-create-regexp-features-plugin" "^7.16.7"
     "@babel/helper-plugin-utils" "^7.16.7"
 
+"@babel/polyfill@^7.4.0":
+  version "7.12.1"
+  resolved "https://registry.yarnpkg.com/@babel/polyfill/-/polyfill-7.12.1.tgz#1f2d6371d1261bbd961f3c5d5909150e12d0bd96"
+  integrity sha512-X0pi0V6gxLi6lFZpGmeNa4zxtwEmCs42isWLNjZZDE0Y8yVfgu0T2OAHlzBbdYlqbW/YXVvoBHpATEM+goCj8g==
+  dependencies:
+    core-js "^2.6.5"
+    regenerator-runtime "^0.13.4"
+
 "@babel/preset-env@^7.14.1":
   version "7.16.11"
   resolved "https://registry.yarnpkg.com/@babel/preset-env/-/preset-env-7.16.11.tgz#5dd88fd885fae36f88fd7c8342475c9f0abe2982"
@@ -8473,12 +8481,24 @@ markdown-it-highlightjs@^4.0.1:
   dependencies:
     highlight.js "^11.5.1"
 
+markdown-it-image-figures@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/markdown-it-image-figures/-/markdown-it-image-figures-2.1.0.tgz#ffe74bd06fff3444bd5695748226198aecf7f1ce"
+  integrity sha512-a5FIzzUlK65iGfQlNWH94cyxKpV+Qj8a+4Q3+wVseryHMCOfGaX0aCNtdEkCeb19uGDzVw3Az5tst2hXWAdJ1Q==
+
 markdown-it-katex@^2.0.3:
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/markdown-it-katex/-/markdown-it-katex-2.0.3.tgz#d7b86a1aea0b9d6496fab4e7919a18fdef589c39"
   integrity sha1-17hqGuoLnWSW+rTnkZoY/e9YnDk=
   dependencies:
     katex "^0.6.0"
+
+markdown-it-picture@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/markdown-it-picture/-/markdown-it-picture-0.0.1.tgz#94dd2fec526c12f647223d149f09bf3c1a3a1277"
+  integrity sha512-gJAWC4beJF6HzIQEWoJmhmAbzpnwvw1EFgOgWOsm6zf1Hrwxku3Gy0KKV8dYBCfkcQ0xuPYodSEWSUy327e8SA==
+  dependencies:
+    "@babel/polyfill" "^7.4.0"
 
 markdown-it-texmath@^0.9.7:
   version "0.9.7"
