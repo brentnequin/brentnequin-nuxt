@@ -2,6 +2,7 @@
   <container>
     <section>
       <h1 v-if="title">{{title}}</h1>
+      <div v-html="$md.render(description)" />
       <div v-for="group in projectsGroups" v-bind:key="Object.keys(group)[0]">
         <h2 class="category-title">{{Object.keys(group)[0]}}</h2>
         <a class="project-item" v-for="item in group[Object.keys(group)[0]]" v-bind:key="Object.keys(item)[0]" :href="item.link">
@@ -25,7 +26,6 @@ export default {
   async asyncData(context) {
     const client = context.app.apolloProvider.defaultClient;
     const response = await client.query({query: ProjectsQuery});
-    // console.log(response.data.projectCategories.data.map((category) => {return {[category.attributes.name]: "hi"}}))
     console.log(response.data.projectCategories.data.map(
         (category) => {
           return {
