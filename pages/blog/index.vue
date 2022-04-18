@@ -28,7 +28,6 @@ export default {
   async asyncData(context) {
     const client = context.app.apolloProvider.defaultClient;
     const response = await client.query({query: BlogQuery});
-    console.log(response.data.posts.data)
     return {
       posts: response.data.posts.data.map(({attributes}) => attributes)
     }

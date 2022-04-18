@@ -26,15 +26,6 @@ export default {
   async asyncData(context) {
     const client = context.app.apolloProvider.defaultClient;
     const response = await client.query({query: ProjectsQuery});
-    console.log(response.data.projectCategories.data.map(
-        (category) => {
-          return {
-            [category.attributes.name]: response.data.project.data.attributes.projects.filter(
-              ({project_category}) => project_category.data.attributes.name == category.attributes.name
-            )
-          }
-        }
-      ))
     return {
       title: response.data.project.data.attributes.title,
       description: response.data.project.data.attributes.description,
