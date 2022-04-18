@@ -1,5 +1,3 @@
-import { maybeDeepFreeze } from "@apollo/client/utilities";
-
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   // target: 'static',
