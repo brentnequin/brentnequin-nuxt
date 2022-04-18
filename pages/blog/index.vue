@@ -1,6 +1,6 @@
 <template>
     <container class="posts">
-        <a class="post" v-for="(post, index) in posts" v-bind:key="index" :href="'blog/' + post.slug">
+        <a class="post" v-for="(post, index) in posts" v-bind:key="index" :href="'/blog/' + post.slug">
             <div class="post-container" :id="post.title">
                 <h2>{{post.title}}</h2>
                 <small class="post-date-created">{{new Date(post.date_created).toLocaleDateString('en-us', dateOptions)}}</small>
