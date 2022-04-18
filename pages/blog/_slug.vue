@@ -14,7 +14,6 @@
 </template>
 
 <script>
-import { VariablesAreInputTypesRule } from "graphql";
 import PostQuery from "~/apollo/post";
 export default {
 
