@@ -1,5 +1,6 @@
 <template>
     <container class="posts">
+      <client-only>
         <a class="post" v-for="(post, index) in posts" v-bind:key="index" :href="'/blog/' + post.slug">
             <div class="post-container" :id="post.title">
                 <h2>{{post.title}}</h2>
@@ -7,6 +8,7 @@
                 <p>{{post.excerpt}}</p>
             </div>
         </a>
+      </client-only>
     </container>
 </template>
 
@@ -25,11 +27,11 @@ export default {
     }
   },
 
-  async asyncData(context) {
-    const client = context.app.apolloProvider.defaultClient;
-    const response = await client.query({query: BlogQuery});
-    return {
-      posts: response.data.posts.data.map(({attributes}) => attributes)
+  apollo: {
+    posts: {
+      prefetch: false,
+      query: BlogQuery,
+      update: data => data.posts.data.map(({attributes}) => attributes)
     }
   }
 
