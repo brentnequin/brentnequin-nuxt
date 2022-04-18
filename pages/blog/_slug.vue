@@ -1,5 +1,5 @@
 <template>
-  <container class="post">
+  <container>
     <section>
       <h1 class="post-title">{{post.title}}</h1>
       <small class="post-date-created">{{new Date(post.date_created).toLocaleDateString('en-us', dateOptions)}}</small>
